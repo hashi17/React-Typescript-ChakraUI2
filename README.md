@@ -1,2 +1,2 @@
-# React-Typescript-ChakraUI2
+# React-Typescript-ChakraUI
 Created with CodeSandbox
