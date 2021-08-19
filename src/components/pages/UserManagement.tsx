@@ -1,16 +1,24 @@
 import { memo, VFC } from "react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
+import { UserCard } from "../organisms/user/UserCard";
 
 export const UserManagement: VFC = memo(() => {
   return (
-    <Wrap spacing="10px">
-      {[...Array(10)].map(() => (
-        <WrapItem>
-          <div
-            style={{ width: "100px", height: "100px", backgroundColor: "teal" }}
-          />
-        </WrapItem>
-      ))}
+    <Wrap p={{ base: 4, md: 10 }}>
+      <WrapItem>
+        <UserCard
+          imageURL="https://source.unsplash.com/random"
+          userName="hashi"
+          fullName="Masaaki HASHIMOTO"
+        />
+      </WrapItem>
+      <WrapItem>
+        <UserCard
+          imageURL="https://source.unsplash.com/random"
+          userName="hashi"
+          fullName="Masaaki HASHIMOTO"
+        />
+      </WrapItem>
     </Wrap>
   );
 });
