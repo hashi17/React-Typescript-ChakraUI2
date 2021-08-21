@@ -4,12 +4,15 @@ import { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { User } from "../types/api/user";
 import { useMessage } from "./useMessage";
-import { useLoginUser } from "../hooks/useLoginUser";
+//import { useLoginUser } from "../hooks/useLoginUser";
+import { useSetRecoilState } from "recoil";
+import { loginUserState } from "../store/loginUserState";
 
 export const useAuth = () => {
   const history = useHistory();
   const { showMessage } = useMessage();
-  const { setLoginUser } = useLoginUser();
+  //const { setLoginUser } = useLoginUser();
+  const setLoginUser = useSetRecoilState(loginUserState);
 
   const [loading, setLoading] = useState(false);
 

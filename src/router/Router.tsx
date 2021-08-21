@@ -5,12 +5,13 @@ import { Login } from "../components/pages/Login";
 import { Page404 } from "../components/pages/Page404";
 import { homeRoutes } from "./HomeRoutes";
 import { HeaderLayout } from "../components/templates/HeaderLayout";
-import { LoginUserProvider } from "../providers/LoginUserProvider";
+//import { LoginUserProvider } from "../providers/LoginUserProvider";
+import { RecoilRoot } from "recoil";
 
 export const Router: VFC = memo(() => {
   return (
     <Switch>
-      <LoginUserProvider>
+      <RecoilRoot>
         <Route exact path="/">
           <Login />
         </Route>
@@ -30,7 +31,7 @@ export const Router: VFC = memo(() => {
             </Switch>
           )}
         />
-      </LoginUserProvider>
+      </RecoilRoot>
       <Route path="*">
         <Page404 />
       </Route>
